@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Code</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/3t.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sign-in.css">
+    <style>
+        @media (max-width: 767px) {
+            .sign-container {
+                height: 50%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .sign-container {
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-basis: max-content;
+            }
+
+            .sign-container .logo {
+                padding: 10px;
+            }
+
+            .container .sign-container form input[type="submit"] {
+                padding: 17px 46px;
+                font-size: 20px;
+            }
+
+            .container .sign-container h3:not(#message h3) {
+                font-size: 25px;
+            }
+
+            .demail {
+                width: 90%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .sign-container {
+                height: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sign-container">
+            <div class="logo">
+                <img src="images/samsarly-logo-light.png" alt="samsarly-logo-light">
+            </div>
+            <!-- div code  -->
+            <div class="dcode">
+                <h3>Enter Code : </h3>
+                <form action="confirmpassword.html" method="post">
+                    <input type="text" name="number" placeholder="Code" id="code" pattern="\d{5}" minlength="5"
+                        maxlength="5" required>
+                    <input type="submit" value="Confirm">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    <script>
+
+        document.querySelector("input[type=submit]").addEventListener("click", () => {
+            window.location.href = "confirmpassword.html";
+        })
+    </script> -->
+    <script src="js/all.min.js"></script>
+    <!-- <script src="js/sign-in.js"></script> -->
+</body>
+
+</html>
